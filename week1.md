@@ -244,19 +244,19 @@ Berikut merupakan contoh HTML yang akan menampikan judul dan sebuah kalimat sede
 ```
 
 HTML memiliki beberapa tag seperti beberapa contoh berikut :
-1. <head></head>
-2. <body></body>
-3. <p></p>
-4. <br>, serta beberapa tag HTML populer
-5. <img>
-6. <video></video>
-7. <table></table>
+1. head
+2. body
+3. p
+4. br, serta beberapa tag HTML populer
+5. img
+6. video
+7. table
 
 Selain tag di atas, HTML juga memiliki hal yang disebut sebagai Semantic HTML, yaitu penggunaan elemen HTML sesuai dengan yang dibutuhkan. Beberapa contoh dari Semantic HTML adalah sebagai berikut :
-1. <header>
-2. <footer>
-3. <section>
-4. <nav>
+1. header
+2. footer
+3. section
+4. nav
 
 Berikut merupakan contoh dari HMTL yang sederhana dan telah menerapkan Semantic HTML.
 ```sh
