@@ -36,24 +36,33 @@ $ ls
 Data    
 'MBKM - Skilvul'
 ```
+Berdasarkan contoh di atas, kita bisa melihat bahwa dengan menggunakan command **ls** pada directory d, kita bisa melihat file dan folder yang terdapat disana, yaitu $RECYCLE.BIN, Alprog 3 & 21, Data, dan MBKM - Skilvul.
+
 **Berpindah Directory**
 Untuk berpindah directory, command yang digunakan adalah **cd**
 ```sh
 Utari Dyani@LAPTOP-5CJUBHVQ MINGW64 ~
 $ cd D:
+
+Utari Dyani@LAPTOP-5CJUBHVQ MINGW64 /d
+$
 ```
+Berdasarkan contoh di atas, bisa kita lihat bahwa dengan menggunakan command cd D: bisa membuat kita berpindah directory ke directory D.
+
 **Melihat Isi files**
 Untik melihat sebuah file, terdapat 3 command yang bisa digunakan, yaitu **cat** untuk melihat sebuah file, **head** untuk melihat beberapa line di awal sebuah file, **tail** untuk melihat beberapa line di akhir sebuah file.
 ```sh
 Utari Dyani@LAPTOP-5CJUBHVQ MINGW64 /d/MBKM - Skilvul
 $ cat 'Pertemuan 4.txt'
 ```
+
 **Membuat File dan Directory**
 Untuk membuat sebuah file, command yang digunakan adalah **touch**
 ```sh
 Utari Dyani@LAPTOP-5CJUBHVQ MINGW64 /d/MBKM - Skilvul/contohfolder
 $ touch contohfile.txt
 ```
+
 Untuk membuat sebuah direktori, command yang digunakan adalah **mkdir**
 ```sh
 Utari Dyani@LAPTOP-5CJUBHVQ MINGW64 /d/MBKM - Skilvul
@@ -70,6 +79,7 @@ Berikut merupakan contoh cara menyalin file dan meletakkannya pada folder yang b
 Utari Dyani@LAPTOP-5CJUBHVQ MINGW64 /d/MBKM - Skilvul/contohfolder
 $ cp contohfile.txt /d/
 ```
+
 **Memindahkan atau Me-rename file dan directory**
 Untuk memindahkan file, command yang digunakan adalah **mv**
 ```sh
@@ -85,12 +95,14 @@ Utari Dyani@LAPTOP-5CJUBHVQ MINGW64 /d/MBKM - Skilvul/contohfolder
 $ ls
 baliklagi.txt
 ```
+
 **Menghapus File dan Direktori**
 Untuk menghapus file dan directory, command yang digunakan adalah **rm** dan **rf** untuk force remove.
 ```sh
 Utari Dyani@LAPTOP-5CJUBHVQ MINGW64 /d/MBKM - Skilvul/contohfolder
 $ rm baliklagi.txt
-```
+``` 
+
 ---
 # GIT & GITHUB DASAR
 ---
@@ -111,7 +123,7 @@ Command yang digunakan untuk membuat repository Git adalah *init*. Untuk membuat
 ```sh
 git init project-baru
 ```
-Namun, jika kita sudah memiliki folder untuk project tersebut maka command yang digunkan adalah sebagai berikut.
+Namun, jika kita sudah memiliki folder untuk project tersebut maka command yang digunakan adalah sebagai berikut.
 ```sh
 git init
 ```
@@ -247,12 +259,12 @@ HTML memiliki beberapa tag seperti beberapa contoh berikut :
 1. head
 2. body
 3. p
-4. br, serta beberapa tag HTML populer
+4. br
 5. img
 6. video
 7. table
 
-Selain tag di atas, HTML juga memiliki hal yang disebut sebagai Semantic HTML, yaitu penggunaan elemen HTML sesuai dengan yang dibutuhkan. Beberapa contoh dari Semantic HTML adalah sebagai berikut :
+Selain tag di atas, HTML juga memiliki hal yang disebut sebagai **Semantic HTML**, yaitu penggunaan elemen HTML sesuai dengan yang dibutuhkan. Beberapa contoh dari Semantic HTML adalah sebagai berikut :
 1. header
 2. footer
 3. section
@@ -270,7 +282,7 @@ Berikut merupakan contoh dari HMTL yang sederhana dan telah menerapkan Semantic 
 
   </head>
   <body>
-    <h1>Hai.. I'm <span>Utari</span></h1>
+    <h1>Hai.. Im <span>Utari</span></h1>
     
     <div class="deskripsi">
       <p>
@@ -311,10 +323,22 @@ Cara menggunakan Extention Live Server sangat mudah, kalian hanya perlu menginst
 Setelah menyelesaikan project HTML, kita bisa lanjut ke tahap **Deploy**. Deploy adalah sebuah proses untuk menyebarkan aplikasi yang sudah kita kerjakan agar bisa digunakan oleh orang lain. Karena yang kita kerjakan pada pembelajaran kali ini adalah HTML atau Web App, maka kita perlu mendeploynya ke server.
 
 Tools yang akan kita gunakan untuk mendeploy project HTML ini adalah **Netlify**. Adapun langkah-langkah untuk mendeploy project pada Netlify adalah sebagai berikut :
-1. Masuk ke netlify.com
+1. Masuk ke Netlify (https://app.netlify.com/)
 2. Register menggunakan email atau github
 3. Masuk ke tab sites lalu drag and drop seluruh folder HTML yang telah kalian buat.
 4. Setelah proses selesai, kalian bisa mengedit nama website kalian.
+
+Selain menggunakan metode drag and drop, kita juga bisa mendeploy project yang ada pada repository github kita. Berikut merupakan step by stepnya :
+1. Masuk ke Netlify (https://app.netlify.com/)
+2. Register menggunakan github
+3. Masuk ke tab sites lalu pilih "Import From Git"
+4. Pilih GitHub
+5. Jika itu merupakan pertama kali kalian mendeploy menggunakan repository github maka akan ada beberapa verfifikasi data dari github yang perlu kalian lengkapi
+6. Pilih repository yang ingin kalian deploy
+7. Klik Deploy Sites
+8. Kalian bisa mengganti nama website pada tab "Site Settings"
+9. Pilih "Change Sites Name"
+
 
 ---
 # CSS
@@ -352,15 +376,15 @@ Konsep dari flexbox adalah memiliki 1 parent/container dan bisa memiliki beberap
 
 ### Properti Flexbox
 **Flex-direction** merupakan properti yang digunakan untuk mengatur letak item child.  Ada 4 value flex-direction, yaitu :
-1. Row (default): secara default letak item child membentuk sebuah baris dari kiri ke kanan.
-2. Row-reverse: letak item child membentuk sebuah baris dari kanan ke kiri
-3. Column: letak item child membentuk sebuah baris dari atas ke bawah
-4. Column-reverse: letak item child membentuk sebuah baris dari bawah ke atas
+1. Row (default) : secara default letak item child membentuk sebuah baris dari kiri ke kanan.
+2. Row-reverse : letak item child membentuk sebuah baris dari kanan ke kiri
+3. Column : letak item child membentuk sebuah baris dari atas ke bawah
+4. Column-reverse : letak item child membentuk sebuah baris dari bawah ke atas
 
 **Flex-wrap**  merupakan properti yang digunakan untuk membatasi jumlah item child dalam 1 line dan membuat child lainnya berpindah posisi ke line yang baru. Ada 4 value dari flex-wrap, yaitu :
-1. No-wrap (default): secara default , flex tidak menggunakan flex-wrap
-2. Wrap: flex item akan memiliki beberapa line dari atas ke bawah  jika space dalam 1 line sudah full width.
-3. Wrap-reverse: kebalikan dari wrap yaitu lex item akan memiliki beberapa line dari bawah ke atas  jika space dalam 1 line sudah full width
+1. No-wrap (default) : secara default , flex tidak menggunakan flex-wrap
+2. Wrap : flex item akan memiliki beberapa line dari atas ke bawah  jika space dalam 1 line sudah full width.
+3. Wrap-reverse : kebalikan dari wrap yaitu lex item akan memiliki beberapa line dari bawah ke atas  jika space dalam 1 line sudah full width
 
 **Flex-flow** adalah properti yang digunakan sebagai shortcut untuk set up flex-direction dan flex-wrap bersamaan. Terdapat 4 value flex-flow, yaitu :
 1. Row nowrap
@@ -516,18 +540,16 @@ Operator ini digunakan untuk menyimpan sebuah nilai pada variabel.
 Operator ini digunakan untuk mendapatkan hasil dari operasi yang dilakukan pada variabel.
 3. Increment dan Decrement (++, --)
 Operator ini digunakan untuk menambah atau mengurangi sebesar 1 nilai.
-4. Arithmetic Operator
-Arithmetic operator adalah operator yang melibatkan operasi matematika. Operator ini meliputi Tambah (+), Kuramg (-), Perkalian (*),Pembagian (/), dan Modulus (%).
-5. Comparison Operator
-Comparison operator adalah operator yang membandingkan satu nilai dengan nilai lainnya. Hasil operasi yang melibatkan comparison operator adalah antara true or false. Operator ini meliputi Lebih kecil dari (<), Lebih besar dari (>) , Lebih kecil atau sama dengan (<=), Lebih besar atau sama dengan (>=), Sama dengan (=== ), Tidak sama dengan (!==).
-6. Logical Operator
-Logical operator biasa digunakan untuk sebuah CONDITIONAL pada pemograman dan menghasilkan nilai BOOLEAN yaitu TRUE or FALSE. Operator ini meliputi
+4. Arithmetic Operator.
+Yaitu operator yang melibatkan operasi matematika. Operator ini meliputi Tambah (+), Kuramg (-), Perkalian (*),Pembagian (/), dan Modulus (%).
+5. Comparison Operator. Operator adalah operator yang membandingkan satu nilai dengan nilai lainnya. Hasil operasi yang melibatkan comparison operator adalah antara true or false. Operator ini meliputi Lebih kecil dari (<), Lebih besar dari (>) , Lebih kecil atau sama dengan (<=), Lebih besar atau sama dengan (>=), Sama dengan (=== ), Tidak sama dengan (!==).
+6. Logical Operator. Operator yang biasa digunakan untuk sebuah CONDITIONAL pada pemograman dan menghasilkan nilai BOOLEAN yaitu TRUE or FALSE. Operator ini meliputi
 AND operator (&&), OR operator (||), NOT operator (!)
 
 ### Conditional
-Conditional merupakan statement percabangan yang menggambarkan suatu kondisi. Conditional statement akan mengecek kondisi spesifik dan menjalankan perintah berdasarkan kondisi tersebut. Yang dicek adalah apakah kondisi tersebut TRUE (benar). Jika TRUE maka code didalam kondisi tersebut dijalankan.
+**Conditional** merupakan statement percabangan yang menggambarkan suatu kondisi. Conditional statement akan mengecek kondisi spesifik dan menjalankan perintah berdasarkan kondisi tersebut. Yang dicek adalah apakah kondisi tersebut TRUE (benar). Jika TRUE maka code didalam kondisi tersebut dijalankan.
 
-**IF STATEMENT**
+**If Statement**
 If statement memiliki 3 kata kunci utama, yaitu if, else if, dan else. Berikut merupakan contoh penggunaan if statement.
 ```sh
 let nilai = 80
@@ -541,7 +563,7 @@ if(nilai >= 95){
 }
 ```
 
-**SWITCH CASE CONDITIONAL**
+**Switch Case Conditional**
 Switch case conditional digunakan ketika percabangan yang ada terlalu banyak. Berikut merupakan contoh penggunaan switch case conditional.
 ```sh
 let warna = merah
@@ -567,7 +589,7 @@ switch(buttonPushed){
 }
 ```
 
-**TERNARY OPERATOR**
+**Ternary Operator**
 Ternary operator merupakan short-syntax dari statement if … else. Berikut merupakan contoh dari penggunaan ternary operator.
 ```sh
 let nilai = 80
@@ -591,7 +613,7 @@ for (let i=0; i<=10; i++){
 }
 ```
 
-**WHILE LOOP**
+**While Loop**
 While loop akan menjalankan instruksi pengulangan kondisi bernilai TRUE. While loop digunakan jika developer tidak mengetahui berapa banyak perulangan yang akan dilakukan.
 
 Contoh sederhana dari while loop adalah sebagai berikut :
@@ -625,3 +647,17 @@ for(let i=0; i<3; i++){
     }
 }
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
