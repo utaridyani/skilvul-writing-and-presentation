@@ -45,7 +45,7 @@ console.log(greet2) //menampilkan Uncaught ReferenceError: words is not defined
 ---
 **Function** adalah kumpulan kode yang menjalankan perintah tertentu dan bisa dipanggil atau digunakan berulang kali.
 
-#### Sturktur Function
+#### Struktur Function
 ```sh
 keyword identifier(parameter){
     kode yang akan dijalankan
@@ -156,28 +156,28 @@ typeof testing //number
 ```
 
 #### String
-**Menghitung Jumlah Karakter String**
+==**Menghitung Jumlah Karakter String**==
 Jika kita ingin mengetahui jumlah karakter dari sebuah string ataupun tipe data lainnya, kita bisa menggunakan **length**. Berikut merupakan contoh penggunaanya :
 ```sh
 let testing = "satu";
 console.log(testing.length) //4
 ```
 
-**Mengubah String menjadi Uppercase**
+==**Mengubah String menjadi Uppercase**==
 Jika kita ingin mengubah sebuah string menjadi Uppercase, kita bisa menggunakan properties **toUpperCase**. Berikut merupakan contoh pengguanaannya :
 ```sh
 let testing = "satu";
 console.log(testing.toUpperCase()) //SATU
 ```
 
-**Mengubah String menjadi Lowercase**
+==**Mengubah String menjadi Lowercase**==
 Jika kita ingin mengubah sebuah string menjadi Lowercase, kita bisa menggunakan properties **toLowerCase**. Berikut merupakan contoh pengguanaannya :
 ```sh
 let testing = "SATU";
 console.log(testing.toLowerCase()) //satu
 ```
 
-**Mengambil Salah Satu Karakter String**
+==**Mengambil Salah Satu Karakter String**==
 Jika kita ingin mengambil sebuah karakter dari sebuah string, kita bisa menggunakan properties **charAt**. Properties ini akan mengambil karakter berdasarkan index dari karakter tersebut. Index dari sebuah string dimulai dari 0 sampai dengan length-1. Berikut merupakan contoh dari penggunaannya :
 ```sh
 let testing = "SATU";
@@ -185,14 +185,14 @@ console.log(testing.charAt(1)) //A
 console.log(testing[1]) //A
 ```
 
-**Mencari Sebuah Karakter**
+==**Mencari Sebuah Karakter**==
 Jika kita ingin mengetahui apakah sebuah data memiliki huruf tertentu, kita bisa menggunakan properties **includes**. Berikut adalah contoh penggunaanya, kita akan  mencoba mencari huruf A pada kata satu.
 ```sh
 let testing = "SATU";
 console.log(testing.includes("A")) //true
 ```
 
-**Mengubah String menjadi Array**
+==**Mengubah String menjadi Array**==
 Jika kita ingin mengubah sebuah string menjadi array, kita bisa menggunakan properties **split**. Berikut adalah contoh penggunaanya :
 ```sh
 let testing = "Ini adalah percobaan untuk writing test";
@@ -207,14 +207,14 @@ let testing = "123"; //string 123
 console.log(Number(testing)); //number 123
 ```
 
-**Mengecek Apakah Sebuah Data Adalah Number**
+==**Mengecek Apakah Sebuah Data Adalah Number**==
 Untuk mengecek sebuah data apakah number atau tidak kita bisa menggunakan **NaN** (Not-A-Number). Properties ini akan mereturn true apabila data tersebut bukanlah number dan akan mereturn false apabila data tersebut adalah number. Berikut merupakan contoh pengguanaannya :
 ```sh
 console.log(isNaN(123)) // false
 console.log(isNaN("satu")) // true
 ```
 
-**Mengubah Penulisan Angka**
+==**Mengubah Penulisan Angka**==
 Untuk mengubah angka desimal yang memiliki angka dengan koma. Kita bisa menggunakan **toFixed** untuk menentukan berapa angka dibelakang koma yang ingin kita tulis. Berikut merupakan contohnya :
 ```sh
 let angka = 3.12345
@@ -270,9 +270,10 @@ console.log("selamat datang".reverse())
 
 ---
 DOM
+
 ---
 
-DOM adalah singkatan dari Document Object Model. Dengan adanya DOM ini, JavaScript diberi akses untuk membuat HTML menjadi dinamis, seperti:
+DOM adalah singkatan dari **Document Object Model**. Dengan adanya DOM ini, JavaScript diberi akses untuk membuat HTML menjadi dinamis, seperti:
 1. Mengubah element HTML pada halaman website.
 2. Mengubah attribute HTML pada halaman website.
 3. Mengubah CSS style pada halaman website.
@@ -285,20 +286,20 @@ Secara singkatnya DOM adalah jembatan supaya bahasa pemrograman dapat berinterak
 #### DOM Manipulation
 Berikut merupakan beberapa sintaks yang digunakan untuk memanipulasi HTML menggunakan DOM.
 
-**Mengambil Sebuah Elemen**
+==**Mengambil Sebuah Elemen**==
 Untuk mengambil sebuah elemen, kita bisa menggunakan **getElementById**
 ```sh
 let app = document.getElementById("app")
 ```
 
-**Memberikan Konten**
+==**Memberikan Konten**==
 Untuk memberikan konten pada elemen yang sudah diambil, kita bisa menggunakan innerText dan innerHTML. innerText akan menyisipkan string atau text kedalam elemen tersebut, sedangkan innerHTML bisa menyisipkan tag HTML.
 ```sh
 app.innerText = "apa kabs"
 app.innerHTML = "<h1>Hallo</h1>"
 ```
 
-**Membuat Elemen Baru**
+==**Membuat Elemen Baru**==
 Untuk membuat elemen baru, kita bisa menggunakan **createElement**
 ```sh
 let p = document.createElement("p")
@@ -307,7 +308,7 @@ let p = document.createElement("p")
 p.innerText = "ini adalah paragraf"
 ```
 
-**Menambahkan Child ke Parent**
+==**Menambahkan Child ke Parent**==
 Sintaks yang digunakan untuk menambahkan child ke parent adalah sebagai berikut :
 ```sh
 app.append(p)
@@ -318,7 +319,7 @@ app.appendChild(p2)
 ```
 Pada contoh di atas, terdapat 2 cara yang digunakan untuk menambahkan child ke parent, yaitu **append** dan **appendChild**. Perbedaan antara 2 hal tersebut adalah appendChild tidak bisa menginputkan data string.
 
-**Menghapus Elemen**
+==**Menghapus Elemen**==
 Untuk menghapus sebuah elemen HTML, kita bisa menggunakan **remove**. Berikut merupakan contoh penggunaannya :
 ```sh
 let end = document.getElementById("end")
@@ -330,7 +331,7 @@ let link = document.getElementsByClassName("link")[0]
 ```
 Source code di atas merupakan sintaks untuk mengambil elemen pertama yang memiliki nama kelas "link".
 
-**Atribute**
+==**Atribute**==
 Sintaks untuk melihat list atribute :
 ```sh
 console.log(link.attributes) // [] list attribute
@@ -346,7 +347,7 @@ Menambahkan sebuah atribute :
 link.setAttribute("id", "google") // add attribute
 ```
 
-**Memberikan Style**
+==**Memberikan Style**==
 Dengan menggunakan DOM, kita juga bisa memanipulasi style dari setiap elemen HTML. Berikut merupakan yang beberpaa yang sering digunakan, yaitu **color** untuk merubah warna, **border** untuk mengatur border, **padding** untuk mengatur padding, **backgroungColor** untuk menambahkan warna pada background.
 ```sh
 link.style.color = "black"
@@ -355,7 +356,7 @@ link.style.padding = "5px 20px"
 link.style.backgroundColor = "aqua"
 ```
 
-**Mengambil Style**
+==**Mengambil Style**==
 Untuk mengambil dan melihat style dari sebuah elemen HTML, kita bisa menggunakan method getComputedStyles.
 ```sh
 let tess = document.getElementById("tess")
@@ -363,8 +364,7 @@ let tessStyle = getComputedStyle(tess)
 console.log(tessStyle.height)
 ```
 
-
-**Class**
+==**Class**==
 Sintaks yang digunakan untuk mengakses kelas, mengecek list kelas yang tersedia, menambahkan kelas, dan juga remove atau menghapus elemen juga bisa dilakukan oleh DOM. Berikut merupakan contoh penggunaan sintaksnya :
 ```sh
 let container = document.getElementsByClassName("container")[0]
@@ -372,7 +372,6 @@ console.log(container.classList); // [] list of class
 container.classList.add("home") // menambahnkan class
 container.classList.remove("container") // menghapus class
 ```
-
 
 #### DOM Events
 Event adalah kegiatan/interaksi yang terjadi pada suatu website. Beberapa jenis events yang sering digunakan adalah :
@@ -384,13 +383,13 @@ Event adalah kegiatan/interaksi yang terjadi pada suatu website. Beberapa jenis 
 6. change
 7. scroll
 
-**Menambahkan Events**
+==**Menambahkan Events**==
 Untuk menambahkan events ke dalam HTML, kita bisa menggunakan 3 cara, yaitu :
 1. HTML Atribute
 2. Event Property
 3. addEventListener()
 
-**Contoh**
+==**Contoh**==
 Berikut merupakan contoh penerapan **addEventListener** pada HTML dan JavaScript.
 HTML :
 ```sh
