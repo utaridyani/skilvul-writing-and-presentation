@@ -35,8 +35,8 @@ Terdapat 2 jenis Web Server, yaitu Static Web Server dan Dynamic Web Server. Ber
 5. Layered System
 6. Code on Demand
 
-**REST** : Arsitektur yang memiliki beberapa rule
-**RESTFUL** : API yang menerapkan arsitektur dan rule REST
+**REST** (Representational State Transfer) : Arsitektur yang memiliki beberapa rule. Arsitektur ini menggunakan metode komunikasi yang menggunakan protokol HTTP untuk pertukaran data dimana metode ini sering diterapkan dalam pengembangan aplikasi. Tujuannya untuk menjadikan sistem memiliki performa yang baik, cepat dan mudah untuk dikembangkan terutama dalam pertukaran dan komunikasi.
+**RESTFUL** : API yang menerapkan arsitektur dan rule REST. RESTFUL API memiliki 4 komponen utama, yaitu : URL Design, HTTP Verbs, HTTP Response Code, Format Response. 
 
 **HTTP Method**
 1. GET : Menggambil data
@@ -180,3 +180,144 @@ Lalu untuk memanggilnya, kita bisa menggunakan kode **npm run** seperti berikut 
 ```sh
 npm run events
 ```
+
+---
+# EXPRESS JS
+---
+
+**Express Js** adalah framework untuk membuat web server buil on Node Js. Framework ini bermanfaat untuk membantu mengelola aliran data dari server ke aplikasi. Kelebihan dari framework Express Js ini adalah fitur caching, support dengan Google V8 Engine, JavaScript, serta didukung oleh komunitas dan skalabilitas aplikasi yang baik.
+
+**Install Express Js** dapat dilakukan dengan menjalankan sintaks berikut pada terminal :
+```sh
+npm i express
+```
+
+**Back End Web Aplication** adalah aplikasi yang berjalan pada server-side yang akan memberikan informasi berupa hal yang diperlukan sesuai dengan request dari client atau browser. Umumnya server-side aplication akan membuat REST API.
+
+#### Basic Routes
+**Routes** adalah sebuah end point yang diapat kita akses menggunakan URL di website. Didalam routes kita perlu menentukan method API, alamat dan response apa saja yang akan dikeluarkan. 
+
+**Method** yang dapat kita gunakan adalah GET, POST, DELETE, PATCH seperti yang ada pada REST API. Berikut merupakan contoh penggunaan method POST.
+```sh
+contoh method
+```
+
+**Response** adalah hal yang dapat kita kirim menggunakan parameter dari route express.js yaitu **res.Send()** untuk mengirim plain text ketika kita mengakses route tersebut. 
+
+**Status Code** adalah penanda informasi apakah route yang kita akses berjalan sebagaimana mestinya dan tidak terjadi error.
+
+**Query** adalah parameter yang digunakan untuk membantu menentukan tindakan yang lebih spesifik daripada hanya sekedar router biasa. Biasanya query ditaruh di akhir route dengan memberikan informasi diawali dengan “?” kemudian tedapat key dan data yang dapat ditindak lanjuti. Ex : “?q=hello&age=23”.
+
+#### Express Middleware
+**Middleware** adalah sebuah fungsi yang memiliki akses ke object request (req), object response (res), dan sebuah fungsi next didalam request-response cycle.
+
+**Middleware** berfungsi untuk menentukan bahwa suatu HTTP Request adalah request yang buruk dan salah, maka middleware function memiliki kemampuan untuk menghentikan request-response cycle.
+
+Sebaliknya, jika middleware function menentukan suatu HTTP Request baik dan benar, maka middleware function memiliki kemampuan untuk melanjutkan request-response cycle ke proses selanjutnya. Setelah sebuah HTTP Request melewati semua middleware yang ada di aplikasi, HTTP Request tersebut akan mencapai handler function.
+
+**Hal yang Dapat Dilakukan Middleware**
+1. Menjalankan kode apapun, artinya adalah function middleware bisa digunakan untuk mengeksekusi kode apapun untuk suatu tujuan tertentu.
+2. Memodifikasi Object Request dan Object Response.
+3. Menghentikan request-response cycle.
+4. Melanjutkan ke middleware function selanjutnya atau ke handler function dalam suatu request response cycle.
+
+**Jenis Express Middleware Berdasarkan Cara Penggunaan**
+1. **Aplication Level Middleware**, sebuah function middleware yang melekat ke instance object Application Express. Penggunaannya dengan cara memanggil method app.use(). Application Level Middleware akan di jalankan setiap kali Express Application menerima sebuah HTTP Request.
+2. **Router Level Middleware**, function middleware yang cara kerjanya sama persis dengan application level middleware, yang menjadikan perbedaan adalah middleware function ini melekat ke instance object Router Express. Penggunaannya dengan cara memanggil method express.Router(). Router Level Middleware hanya akan di jalankan setiap kali sebuah Express Router yang menggunakan middleware ini menerima sebuah HTTP Request, sedangan pada Router yang lain tidak akan dijalankan.
+3. **Error Handling Middleware**, error Handling mengacu kepada bagaimana cara sebuah Express Application menangkap dan memproses error yang terjadi, baik itu berupa kesalahan yang synchronous maupun asynchronous. Error handle function default milik Express Application hanyalah kerangka functionnya saja, kita tetap harus menuliskan di dalam function ini bagaimana sebuah error akan di handle. Error Handling Middleware digunakan pada Application Level Middleware
+
+**Jenis Express Middleware Berdasarkan Source Middleware Function**
+1. **Express Build-in Middleware**, Express JS sudah menyediakan 3 buah build-in middleware function yang bisa digunakan, yaitu :
+    - express.static(), memungkinkan sebuah express application melayani asset statis berupa file, seperti file HTML, gambar, video, dokumen, dan sebagainya.
+    - express.json(), memungkinkan sebuah express application menerima HTTP Request yang membawa payload (data) dalam format JSON.
+    - xpress.urlEncoded(), memungkinkan sebuah express application menerima HTTP Request yang membawa payload (data) dalam format urlencoded.
+2. **Third Party (custom) Middleware**, memungkinkan kita untuk menambahkan fungsionalitas dari sebuah Express Application. 
+
+---
+# DESIGN DATABASE WITH MySQL
+---
+Berdasarkan materi yang telah dipelajari pada hari Kamis dan Jumat, saya akan mendesain sebuah database dengan studi kasus **Peminjaman Buku pada Perpustakaan** dan **Film Favorit (challenge pada saat kelas)**
+
+#### Menentukan Entity
+Beberapa kandidat yang paling sering menjadi sebuah entity : peoples, things, events, locations. 
+
+Berikut merupakan entitas yang terdapat pada studi kasus peminjaman buku perpustakaan.
+1. Mahasiswa
+2. Buku
+3. Peminjaman
+
+Berikut merupakan entitas yang terdapat pada studi kasus peminjaman buku perpustakaan.
+1. Mahasiswa
+2. Film
+3. Genre
+
+#### Menentukan Atribut dari Setiap Entity
+Berikut merupakan atribut dari masing-masing entitas yang sebelumnya telah disebutkan pada database pinjam buku.
+1. Mahasiswa
+    - id_mahasiswa
+    - nama
+    - jurusan
+    - fakultas
+2. Buku
+    - id_buku
+    - judul
+    - tahun_terbit
+    - penulis
+3. Peminjaman
+    - id_mahasiswa
+    - id_buku
+    - tanggal_pinjam
+    - tanggal_kemballi
+
+Berikut merupakan atribut dari masing-masing entitas yang sebelumnya telah disebutkan pada database film favorit.
+1. Mahasiswa
+    - nim
+    - nama
+    - alamat
+2. Film
+    - id_film
+    - judul
+    - tgl_rilis
+3. Genre
+    - id_genre
+    - nama
+
+#### Menentukan Relasi Antar Entity
+1. Relasi antara **mahasiswa** dan **buku** adalah many to many. Hal ini disebabkan satu orang mahasiswa bisa meminjam banyak buku dan buku dapat dipinjam oleh banyak mahasiswa. Dikarenakan relasinya adalah many to many, maka diperlukan entitas pelengkap, yaitu table peminjaman.
+
+2. Relasi antara **mahasiswa dan film** adalah many to many karena seorang mahasiswa bisa menyukai lebih dari satu lagu dan satu lagu bisa disukai oleh banyak ornag. Relasi antara **film dan genre** adalah many to many karena sebuah film bisa memiliki lebih dari satu genre dna satu genre bisa dimilii lebih dari satu orang.
+
+**ERD database dapat dilihat pada folder gambar**
+
+#### Normalisasi Database
+Normalisasi database adalah pengelompokan atribut data yang akan membentuk entitas sederhana, non redundant, fleksible dan mudah beradaptasi sehingga dapat dipastikan bahwa database yang dibuat adalah database yang berkualitas baik.
+
+**Tujuan Normalisasi Database**
+1. Menghilangkan dan mengurangi redudansi data.
+2. Memastikan dependensi data (data berada pada tabel yang tepat).
+
+**Tahapan Normalisasi**
+1. 1NF, inti dari normalisasi 1NF adalah tidak boleh ada grouping data ataupun duplikasi data. Suatu tabel dikatakan 1NF jika dan hanya jika setiap atribut dari data tersebut hanya memiliki nilai tunggal dalam satu baris.
+2. 2NF, pada tahap normalisasi 2NF ini tabel tersebut harus dipecah berdasarkan primary key. Syarat 2NF adalah tidak diperkenankan adanya partial “functional dependency” kepada primary key dalam sebuah tabel.
+3. 3NF, jika terdapat suatu atribut yang tidak bergantung pada primary key tapi bergantung pada field yang lain maka atribut-atribut tersebut perlu dipisah ke tabel baru. Pada 3NF tidak diperkenankan adanya partial “transitive dependency” dalam sebuah tabel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
